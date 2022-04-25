@@ -1,7 +1,6 @@
-# curriculum-databases-projects-template
+# Vet Clinic Database
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> This is a project about a Vet Clinic Database.
 
 
 ## Getting Started
@@ -15,34 +14,23 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Mirouhml**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mirouhml](https://github.com/mirouhml)
+- LinkedIn: [ammar-hamlaoui](https://www.linkedin.com/in/ammar-hamlaoui-514909189/)
+- Twitter: [@kuronomirou](https://twitter.com/kuronomirou)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
+## Contributors
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/mirouhml/mv-vet-clinic-db/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Give a ⭐️ if you like our website!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+- This project is [MIT](./LICENSE) licensed.
+- This project is [creativecommons](https://creativecommons.org/licenses/by-nc/4.0/) licensed.
