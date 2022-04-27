@@ -36,3 +36,37 @@ UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Melod
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Melody Pond') WHERE name LIKE 'Blossom';
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Dean Winchester') WHERE name LIKE 'Angemon';
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Dean Winchester') WHERE name LIKE 'Boarmon';
+
+INSERT INTO vets (name, age, date_of_graduation) VALUES 
+  ('William Tatcher', 45, '2000-04-23'),
+  ('Maisy Smith', 26, '2019-01-17'),
+  ('Stephanie Mendez', 64, '1981-05-04'),
+  ('Jack Harkness', 38, '2008-06-08');
+
+INSERT INTO specializations (species_id, vets_id) VALUES
+  ((SELECT id FROM species WHERE name LIKE 'Pokemon'),(SELECT id FROM vets WHERE name LIKE 'William Tatcher')),
+  ((SELECT id FROM species WHERE name LIKE 'Pokemon'),(SELECT id FROM vets WHERE name LIKE 'Stephanie Mendez')),
+  ((SELECT id FROM species WHERE name LIKE 'Digimon'),(SELECT id FROM vets WHERE name LIKE 'Stephanie Mendez')),
+  ((SELECT id FROM species WHERE name LIKE 'Digimon'),(SELECT id FROM vets WHERE name LIKE 'Jack Harkness'));
+
+INSERT INTO visits (animal_id, vets_id, date_of_visit) VALUES
+  ((SELECT id FROM animals WHERE name LIKE 'Agumon'),(SELECT id FROM vets WHERE name LIKE 'William Tatcher'),'2020-05-24'),
+  ((SELECT id FROM animals WHERE name LIKE 'Agumon'),(SELECT id FROM vets WHERE name LIKE 'Stephanie Mendez'),'2020-07-22'),
+  ((SELECT id FROM animals WHERE name LIKE 'Gabumon'),(SELECT id FROM vets WHERE name LIKE 'Jack Harkness'),'2021-02-02'),
+  ((SELECT id FROM animals WHERE name LIKE 'Pikachu'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2020-01-05'),
+  ((SELECT id FROM animals WHERE name LIKE 'Pikachu'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2020-03-08'),
+  ((SELECT id FROM animals WHERE name LIKE 'Pikachu'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2020-05-14'),
+  ((SELECT id FROM animals WHERE name LIKE 'Devimon'),(SELECT id FROM vets WHERE name LIKE 'Stephanie Mendez'),'2021-05-04'),
+  ((SELECT id FROM animals WHERE name LIKE 'Charmander'),(SELECT id FROM vets WHERE name LIKE 'Jack Harkness'),'2021-02-24'),
+  ((SELECT id FROM animals WHERE name LIKE 'Plantmon'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2019-12-21'),
+  ((SELECT id FROM animals WHERE name LIKE 'Plantmon'),(SELECT id FROM vets WHERE name LIKE 'William Tatcher'),'2020-08-10'),
+  ((SELECT id FROM animals WHERE name LIKE 'Plantmon'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2021-04-07'),
+  ((SELECT id FROM animals WHERE name LIKE 'Squirtle'),(SELECT id FROM vets WHERE name LIKE 'Stephanie Mendez'),'2019-09-29'),
+  ((SELECT id FROM animals WHERE name LIKE 'Angemon'),(SELECT id FROM vets WHERE name LIKE 'Jack Harkness'),'2020-10-03'),
+  ((SELECT id FROM animals WHERE name LIKE 'Angemon'),(SELECT id FROM vets WHERE name LIKE 'Jack Harkness'),'2020-11-04'),
+  ((SELECT id FROM animals WHERE name LIKE 'Boarmon'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2019-01-24'),
+  ((SELECT id FROM animals WHERE name LIKE 'Boarmon'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2019-05-15'),
+  ((SELECT id FROM animals WHERE name LIKE 'Boarmon'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2020-02-27'),
+  ((SELECT id FROM animals WHERE name LIKE 'Boarmon'),(SELECT id FROM vets WHERE name LIKE 'Maisy Smith'),'2020-08-03'),
+  ((SELECT id FROM animals WHERE name LIKE 'Blossom'),(SELECT id FROM vets WHERE name LIKE 'Stephanie Mendez'),'2020-05-24'),
+  ((SELECT id FROM animals WHERE name LIKE 'Blossom'),(SELECT id FROM vets WHERE name LIKE 'William Tatcher'),'2021-01-11');
