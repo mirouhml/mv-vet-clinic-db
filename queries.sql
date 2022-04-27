@@ -260,13 +260,16 @@ ORDER BY date_of_visit ASC;
 -- What animal has the most visits to vets?
 SELECT
   animals.name as animal_name,
-  MAX(animal_id) as number_of_visits
+  COUNT(animal_id) as number_of_visits
 FROM
-  visits
-JOIN animals
+  animals
+INNER JOIN visits
   ON animal_id = animals.id
+JOIN vets
+  ON vets.id = visits.vets_id
 GROUP BY animals.name
-ORDER BY number_of_visits DESC LIMIT 1;
+ORDER BY number_of_visits DESC
+LIMIT 1;
 
 -- Who was Maisy Smith's first visit?
 SELECT
