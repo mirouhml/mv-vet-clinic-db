@@ -336,3 +336,11 @@ WHERE visits.vets_id = (
 )
 GROUP BY species.name
 LIMIT 1;
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+CREATE INDEX animal_ids ON visits(animal_id ASC);
+CREATE INDEX vet_ids ON visits(vets_id ASC);
+CREATE INDEX owners_emails ON owners(email ASC);
