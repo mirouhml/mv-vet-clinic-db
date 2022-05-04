@@ -2,6 +2,8 @@
 
 > This is a project about a Vet Clinic Database.
 
+![image](https://user-images.githubusercontent.com/20567503/166646111-c8008ba6-e94f-437d-b76a-2c942fcd95bf.png)
+
 
 ## Getting Started
 
